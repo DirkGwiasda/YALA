@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /pipelines/appSettings.json.dev
 /pipelines/appSettings.json.prod
+/pipelines/appsettings.json.dev
+/pipelines/appsettings.json.prod
