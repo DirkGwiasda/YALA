@@ -5,6 +5,7 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{CAC8E437-953B-4143-A57C-A2D3DEFA0C37}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\pipelines\appsettings.json.bak = ..\..\pipelines\appsettings.json.bak
 		..\..\pipelines\appsettings.json.dev = ..\..\pipelines\appsettings.json.dev
 		..\..\pipelines\postbuild.bat = ..\..\pipelines\postbuild.bat
 		..\..\pipelines\appsettings.json.prod = ..\..\pipelines\appsettings.json.prod

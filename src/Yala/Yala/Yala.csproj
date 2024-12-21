@@ -13,16 +13,12 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.0" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="call C:\Repos\Yala\pipelines\postbuild.bat" />
-  </Target>
-
   <Target Name="PrePublishTarget" BeforeTargets="Publish">
-    <Exec Command="call C:\Repos\Yala\pipelines\postbuild.bat" />
+    <Exec Command="call C:\Repos\Yala\pipelines\prepublish.bat" />
   </Target>
 
   <Target Name="PostPublishTarget" AfterTargets="Publish">
-    <Exec Command="call C:\Repos\Yala\pipelines\postbuild.bat" />
+    <Exec Command="call C:\Repos\Yala\pipelines\postpublish.bat" />
   </Target>
 
 </Project>
