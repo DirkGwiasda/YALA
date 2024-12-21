@@ -1,15 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{CAC8E437-953B-4143-A57C-A2D3DEFA0C37}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\pipelines\appSettings.json.dev = ..\..\pipelines\appSettings.json.dev
-		..\..\pipelines\appSettings.json.prod = ..\..\pipelines\appSettings.json.prod
+		..\..\pipelines\appsettings.json.dev = ..\..\pipelines\appsettings.json.dev
+		..\..\pipelines\postbuild.bat = ..\..\pipelines\postbuild.bat
+		..\..\pipelines\appsettings.json.prod = ..\..\pipelines\appsettings.json.prod
+		..\..\pipelines\postpublish.bat = ..\..\pipelines\postpublish.bat
+		..\..\pipelines\prepublish.bat = ..\..\pipelines\prepublish.bat
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yala", "Yala\Yala.csproj", "{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

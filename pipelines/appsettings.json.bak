@@ -1,0 +1,14 @@
+{
+  "Keycloak": {
+    "Authority": "authurl",
+    "ClientId": "clientid",
+    "ClientSecret": "secret"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
