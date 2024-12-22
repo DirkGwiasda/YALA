@@ -7,10 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{
 	ProjectSection(SolutionItems) = preProject
 		..\..\pipelines\appsettings.json.bak = ..\..\pipelines\appsettings.json.bak
 		..\..\pipelines\appsettings.json.dev = ..\..\pipelines\appsettings.json.dev
-		..\..\pipelines\postbuild.bat = ..\..\pipelines\postbuild.bat
 		..\..\pipelines\appsettings.json.prod = ..\..\pipelines\appsettings.json.prod
+		..\..\pipelines\appsettings.json.tmp = ..\..\pipelines\appsettings.json.tmp
+		..\..\pipelines\postbuild.bat = ..\..\pipelines\postbuild.bat
 		..\..\pipelines\postpublish.bat = ..\..\pipelines\postpublish.bat
-		..\..\pipelines\prepublish.bat = ..\..\pipelines\prepublish.bat
+		..\..\.git\hooks\pre-commit = ..\..\.git\hooks\pre-commit
+		..\..\pipelines\precommit.bat = ..\..\pipelines\precommit.bat
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yala", "Yala\Yala.csproj", "{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}"
