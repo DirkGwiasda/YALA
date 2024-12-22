@@ -17,26 +17,26 @@ namespace Yala
                 .AddOpenIdConnect("oidc", options =>
                 {
                     options.Authority = keycloakConfig["Authority"];
-                    options.ClientId = keycloakConfig["ClientId"];
-                    options.ClientSecret = keycloakConfig["ClientSecret"];
+                    options.ClientId = keycloakConfig["uiClientId"];
+                    options.ClientSecret = keycloakConfig["uiClientSecret"];
                     options.RequireHttpsMetadata = false;
                     options.ResponseType = "code";
                     options.SaveTokens = false;
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
                 })
-                //.AddJwtBearer("Bearer", options =>
-                //{
-                //    options.Authority = keycloakConfig["Authority"];
-                //    options.RequireHttpsMetadata = false;
-                //    options.TokenValidationParameters = new TokenValidationParameters
-                //    {
-                //        ValidateAudience = true,
-                //        ValidAudience = keycloakConfig["ClientId"],
-                //        ValidateIssuer = true,
-                //        ValidIssuer = keycloakConfig["Authority"]
-                //    };
-                //})
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = keycloakConfig["Authority"];
+                    options.RequireHttpsMetadata = false;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateAudience = true,
+                        ValidAudience = keycloakConfig["apiClientId"],
+                        ValidateIssuer = true,
+                        ValidIssuer = keycloakConfig["Authority"]
+                    };
+                })
                 ;
 
                 services.AddAuthorization(options =>

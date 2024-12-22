@@ -1,8 +1,8 @@
 {
   "Keycloak": {
     "Authority": "foo",
-    "ClientId": "bar",
-    "ClientSecret": "topsecret"
+    "uiClientId": "bar",
+    "uiClientSecret": "topsecret"
   },
   "Logging": {
     "LogLevel": {
