@@ -1,7 +1,47 @@
-﻿@page "/"
+﻿@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager Navigation
+@page "/"
+
+@if (authState != null && user != null)
+{
+    <p><strong>id:</strong> @user.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value</p>
+    <p><strong>id:</strong> @user.Identity?.Name</p>
+    <p><button @onclick="Logout">Logout</button></p>
+}
+else
+{
+    <p>Benutzer ist nicht angemeldet.</p>
+}
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+@code {
+    private ClaimsPrincipal? user;
+    private AuthenticationState? authState;
+
+    private Task Logout()
+    {
+        Console.WriteLine("Logout-Methode wurde aufgerufen.");
+        var logoutUrl = $"http://rpi4:8080/realms/YALA/protocol/openid-connect/logout?client_id=test-yala-client&post_logout_redirect_uri=http://localhost:5119/";
+        Navigation.NavigateTo(logoutUrl, true);
+        return Task.CompletedTask;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        user = authState.User;
+
+        if (user.Identity != null && user.Identity.IsAuthenticated)
+        {
+            Console.WriteLine($"Benutzername: {user.Identity.Name}");
+        }
+        //await Logout();
+    }
+
+}

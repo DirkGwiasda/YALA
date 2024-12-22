@@ -10,7 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{
 		..\..\pipelines\appsettings.json.prod = ..\..\pipelines\appsettings.json.prod
 		..\..\pipelines\appsettings.json.tmp = ..\..\pipelines\appsettings.json.tmp
 		..\..\.git\hooks\post-commit = ..\..\.git\hooks\post-commit
-		..\..\pipelines\postbuild.bat = ..\..\pipelines\postbuild.bat
 		..\..\pipelines\postcommit.bat = ..\..\pipelines\postcommit.bat
 		..\..\.git\hooks\pre-commit = ..\..\.git\hooks\pre-commit
 		..\..\pipelines\precommit.bat = ..\..\pipelines\precommit.bat
