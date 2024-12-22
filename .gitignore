@@ -365,3 +365,5 @@ FodyWeavers.xsd
 /pipelines/appSettings.json.prod
 /pipelines/appsettings.json.dev
 /pipelines/appsettings.json.prod
+/pipelines/appsettings.json.tmp
+/.git/hooks/pre-commit
