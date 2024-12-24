@@ -23,6 +23,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Contracts"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Infrastructure.MariaDbRepository", "Net.Gwiasda.Yala.Infrastructure.MariaDbRepository\Net.Gwiasda.Yala.Infrastructure.MariaDbRepository.csproj", "{22D33A84-B827-4323-9C2B-369061EBEC0F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{04962136-AF5C-463A-A2B6-362DE9095E6A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\sql\CreateAppLoggingConfigurationTable.sql = ..\..\sql\CreateAppLoggingConfigurationTable.sql
+		..\..\sql\CreateLogEntryTable.sql = ..\..\sql\CreateLogEntryTable.sql
+		..\..\sql\CreateLogTypeTable.sql = ..\..\sql\CreateLogTypeTable.sql
+		..\..\sql\CreateSourceLoggingConfigurationTable.sql = ..\..\sql\CreateSourceLoggingConfigurationTable.sql
+		..\..\sql\FillLogType.sql = ..\..\sql\FillLogType.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
