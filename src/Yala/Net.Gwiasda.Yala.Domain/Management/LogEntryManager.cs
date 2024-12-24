@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Net.Gwiasda.Yala.Management
+﻿namespace Net.Gwiasda.Yala
 {
-    internal class LogEntryManager
+    public class LogEntryManager : ILogEntryManager
     {
+        private readonly ILogEntryRepository _repository;
+
+        public LogEntryManager(ILogEntryRepository repository)
+        {
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        }
+
+        public async Task WriteLogEntryAsync(LogEntry entry)
+            => await _repository.WriteLogEntryAsync(entry);
     }
 }

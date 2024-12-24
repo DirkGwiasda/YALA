@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Net.Gwiasda.Yala.Contracts\Net.Gwiasda.Yala.Contracts.csproj" />
     <ProjectReference Include="..\Net.Gwiasda.Yala.Domain\Net.Gwiasda.Yala.Domain.csproj" />
   </ItemGroup>

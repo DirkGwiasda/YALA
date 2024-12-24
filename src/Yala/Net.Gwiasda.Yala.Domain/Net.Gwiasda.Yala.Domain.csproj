@@ -7,4 +7,8 @@
     <RootNamespace>Net.Gwiasda.Yala</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Gwiasda.Yala.Contracts\Net.Gwiasda.Yala.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

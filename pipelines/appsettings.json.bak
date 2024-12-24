@@ -4,6 +4,9 @@
     "uiClientId": "bar",
     "uiClientSecret": "topsecret"
   },
+  "MariaDb": {
+    "ConnectionString": "Server=HOSTNAME;Database=DBNAME;User Id=USER_ID;Password=PASSWORD;"
+  },
   "Logging": {
     "LogLevel": {
       "Default": "Information",

@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using Yala.Components;
 using Yala;
+using Net.Gwiasda.Yala;
+using Net.Gwiasda.Yala.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,11 @@ builder.Services.AddLogging(builder =>
 });
 
 builder.Services.AddControllers();
+
+var mariaDbConfig = builder.Configuration.GetSection("MariaDb");
+builder.Services.AddSingleton<ILogEntryRepository>(new MariaDbLogEntryRepository(mariaDbConfig["ConnectionString"]));
+builder.Services.AddSingleton<ILogEntryManager, LogEntryManager>();
+
 
 var app = builder.Build();
 

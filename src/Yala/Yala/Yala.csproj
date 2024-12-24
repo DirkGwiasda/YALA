@@ -15,6 +15,12 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Gwiasda.Yala.Contracts\Net.Gwiasda.Yala.Contracts.csproj" />
+    <ProjectReference Include="..\Net.Gwiasda.Yala.Domain\Net.Gwiasda.Yala.Domain.csproj" />
+    <ProjectReference Include="..\Net.Gwiasda.Yala.Infrastructure.MariaDbRepository\Net.Gwiasda.Yala.Infrastructure.MariaDbRepository.csproj" />
+  </ItemGroup>
+
   <Target Name="PrePublishTarget" BeforeTargets="Publish">
     <Exec Command="call C:\Repos\Yala\pipelines\prepublish.bat" />
   </Target>
