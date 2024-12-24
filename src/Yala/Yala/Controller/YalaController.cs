@@ -14,6 +14,13 @@ namespace Yala.Controller
             return Ok(new { Message = "access granted!" });
         }
 
+        [HttpGet("public")]
+        [AllowAnonymous]
+        public IActionResult Footest(string anyData)
+        {
+            return Ok(new { Message = "anonymous allowed" });
+        }
+
         /// <summary>
         /// http://localhost:5041/api/yala/public
         /// </summary>

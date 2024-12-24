@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yala", "Yala\Yala.csproj", "{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Domain", "Net.Gwiasda.Yala.Domain\Net.Gwiasda.Yala.Domain.csproj", "{BCA71998-3A5C-4E10-88F8-1727179D30F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Contracts", "Net.Gwiasda.Yala.Contracts\Net.Gwiasda.Yala.Contracts.csproj", "{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{854D9E0D-B766-4EF2-B9B9-4D632A54EB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA71998-3A5C-4E10-88F8-1727179D30F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA71998-3A5C-4E10-88F8-1727179D30F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA71998-3A5C-4E10-88F8-1727179D30F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA71998-3A5C-4E10-88F8-1727179D30F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
