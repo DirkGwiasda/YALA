@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Net.Gwiasda.Yala
+﻿namespace Net.Gwiasda.Yala
 {
     public interface ILogEntryValidator
     {
+        bool IsValid(LogEntry entry);
     }
 }

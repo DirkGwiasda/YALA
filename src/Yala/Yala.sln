@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Contracts", "Net.Gwiasda.Yala.Contracts\Net.Gwiasda.Yala.Contracts.csproj", "{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Gwiasda.Yala.Infrastructure.MariaDbRepository", "Net.Gwiasda.Yala.Infrastructure.MariaDbRepository\Net.Gwiasda.Yala.Infrastructure.MariaDbRepository.csproj", "{22D33A84-B827-4323-9C2B-369061EBEC0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AFBB2D-7245-40CD-B6B4-30F5A051F24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D33A84-B827-4323-9C2B-369061EBEC0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D33A84-B827-4323-9C2B-369061EBEC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D33A84-B827-4323-9C2B-369061EBEC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D33A84-B827-4323-9C2B-369061EBEC0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
