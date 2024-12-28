@@ -2,6 +2,7 @@
 {
     public interface ILogEntryManager
     {
+        Task<List<string>> GetApplicationNamesAsync();
         Task WriteLogEntryAsync(LogEntry entry);
     }
 }

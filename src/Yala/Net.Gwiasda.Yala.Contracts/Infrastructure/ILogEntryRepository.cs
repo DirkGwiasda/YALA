@@ -2,7 +2,7 @@
 {
     public interface ILogEntryRepository
     {
-        Task ForceRepositoryExists();
+        Task<List<string>> ReadApplicationNamesAsync();
         Task WriteLogEntryAsync(LogEntry entry);
     }
 }

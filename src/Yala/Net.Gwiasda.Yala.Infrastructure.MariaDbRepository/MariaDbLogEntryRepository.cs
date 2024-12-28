@@ -11,6 +11,26 @@ namespace Net.Gwiasda.Yala.Infrastructure
             throw new NotImplementedException();
         }
 
+        public async Task<List<string>> ReadApplicationNamesAsync()
+        {
+            const string sql = @"
+                SELECT DISTINCT appname FROM LogEntry;";
+
+
+            using var connection = await base.GetConnectionAsync();
+            using var command = connection.CreateCommand();
+            command.CommandText = sql;
+
+            using (var reader = command.ExecuteReader())
+            {
+                var appNames = new List<string>();
+                while (reader.Read())
+                {
+                    appNames.Add(reader.GetString(0));
+                }
+                return appNames;
+            }
+        }
         public async Task WriteLogEntryAsync(LogEntry entry)
         {
             if(entry == null) throw new ArgumentNullException(nameof(entry));

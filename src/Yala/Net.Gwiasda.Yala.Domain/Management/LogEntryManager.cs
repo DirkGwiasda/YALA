@@ -1,4 +1,5 @@
-﻿namespace Net.Gwiasda.Yala
+﻿
+namespace Net.Gwiasda.Yala
 {
     public class LogEntryManager : ILogEntryManager
     {
@@ -8,6 +9,9 @@
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
+
+        public async Task<List<string>> GetApplicationNamesAsync()
+            => await _repository.ReadApplicationNamesAsync();
 
         public async Task WriteLogEntryAsync(LogEntry entry)
             => await _repository.WriteLogEntryAsync(entry);

@@ -28,6 +28,15 @@ var mariaDbConfig = builder.Configuration.GetSection("MariaDb");
 builder.Services.AddSingleton<ILogEntryRepository>(new MariaDbLogEntryRepository(mariaDbConfig["ConnectionString"]));
 builder.Services.AddSingleton<ILogEntryManager, LogEntryManager>();
 
+var mng = builder.Services.BuildServiceProvider().GetService<ILogEntryManager>();
+mng.WriteLogEntryAsync(new LogEntry
+{
+    AppName = "Yala",
+    SourceName = "Program",
+    Message = "Application starting",
+    LogType = LogType.Information,
+    Timestamp = DateTime.Now
+}).Wait();
 
 var app = builder.Build();
 

@@ -2,6 +2,6 @@
 {
     public interface ILogEntryValidator
     {
-        bool IsValid(LogEntry entry);
+        void Validate(LogEntry entry);
     }
 }
