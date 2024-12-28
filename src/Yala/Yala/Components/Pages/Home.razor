@@ -1,7 +1,33 @@
 ﻿@page "/"
 
+@inject ILogEntryManager LogEntryManager
+
 <PageTitle>Home</PageTitle>
+@if (_appNames != null && _appNames.Count > 0)
+{
+    <MudStack Style="width: 500px">
+        <MudSelect @bind-Value="_selectedAppName" ReadOnly="false" Disabled="false" Variant="Variant.Outlined">
+            @foreach (var appName in _appNames)
+            {
+                <MudSelectItem Value="appName">@appName</MudSelectItem>
+            }
+        </MudSelect>
+    </MudStack>
+}
 
-<h1>Hello, world!</h1>
+<MudText Typo="Typo.body1">@_selectedAppName</MudText>
 
-Welcome to your new app.
+@code {
+    private List<string> _appNames = new List<string>();
+    private string? _selectedAppName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _appNames = await LogEntryManager.GetApplicationNamesAsync();
+        if (_appNames.Count > 0)
+        {
+            _selectedAppName = _appNames[0];
+        }
+        StateHasChanged();
+    }
+}

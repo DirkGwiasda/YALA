@@ -4,6 +4,7 @@ using Yala.Components;
 using Yala;
 using Net.Gwiasda.Yala;
 using Net.Gwiasda.Yala.Infrastructure;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services
     .AddHttpContextAccessor()
     .AddRazorComponents()
         .AddInteractiveServerComponents();
+
+builder.Services.AddMudServices();
 
 var keycloakConfig = builder.Configuration.GetSection("Keycloak");
 builder.Services.AddSecurityServices(keycloakConfig);

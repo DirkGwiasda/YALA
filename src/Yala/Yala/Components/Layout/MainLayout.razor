@@ -1,5 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
+<MudThemeProvider IsDarkMode="true" Theme="McpTheme" />
+<MudPopoverProvider />
+
+<MudDialogProvider />
+
+<MudSnackbarProvider />
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -21,3 +28,21 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code {
+    MudTheme McpTheme = new MudTheme()
+        {
+            PaletteDark = new PaletteDark()
+            {
+                // Primary = Colors.Red.Default,
+                // Secondary = Colors.Blue.Default,
+                // Background = Colors.Red.Default,
+            },
+
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        };
+}
