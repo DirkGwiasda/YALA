@@ -2,7 +2,7 @@
 {
     public class LogEntry
     {
-        public string Id { get; } = Guid.NewGuid().ToString();
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string? AppName { get; set; }
         public string? SourceName { get; set; }
         public string? Message { get; set; }

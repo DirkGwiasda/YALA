@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/config"
 
 @inject ILogEntryManager LogEntryManager
 
@@ -13,20 +13,6 @@
             }
         </MudSelect>
     </MudStack>
-    <MudTable Items="_logEntries" Hover="true" Bordered="true" Striped="true">
-        <HeaderContent>
-            <MudTh>ID</MudTh>
-            <MudTh>Timestamp</MudTh>
-            <MudTh>Message</MudTh>
-            <MudTh>SourceName</MudTh>
-        </HeaderContent>
-        <RowTemplate>
-            <MudTd DataLabel="ID">@context.Id</MudTd>
-            <MudTd DataLabel="Timestamp">@context.Timestamp</MudTd>
-            <MudTd DataLabel="Message">@context.Message</MudTd>
-            <MudTd DataLabel="SourceName">@context.SourceName</MudTd>
-        </RowTemplate>
-    </MudTable>
 }
 
 @code {
@@ -46,10 +32,10 @@
     }
     private async Task OnAppNameChanged(string value)
     {
-        if (!string.IsNullOrWhiteSpace(value))
-        {
-            _logEntries = await LogEntryManager.GetLogEntriesFromAppAsync(value, 0, 1000);
-            StateHasChanged();
-        }
+        // if (!string.IsNullOrWhiteSpace(value))
+        // {
+        //     _logEntries = await LogEntryManager.GetLogEntriesFromAppAsync(value, 0, 1000);
+        //     StateHasChanged();
+        // }
     }
 }
